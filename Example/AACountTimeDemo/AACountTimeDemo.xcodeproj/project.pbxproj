@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA78B53D58A1CCEF0516FAB /* Pods_AACountTimeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F8335B4C237A2AD65EA836 /* Pods_AACountTimeDemo.framework */; };
 		7593CC51235816BD004D52D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593CC50235816BD004D52D5 /* AppDelegate.m */; };
 		7593CC54235816BD004D52D5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593CC53235816BD004D52D5 /* SceneDelegate.m */; };
 		7593CC57235816BD004D52D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593CC56235816BD004D52D5 /* ViewController.m */; };
@@ -32,6 +33,9 @@
 		7593CC61235816BF004D52D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7593CC6923586929004D52D5 /* AACountTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACountTime.m; sourceTree = "<group>"; };
 		7593CC6A23586929004D52D5 /* AACountTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACountTime.h; sourceTree = "<group>"; };
+		DC7FE6209242A87BF7957D07 /* Pods-AACountTimeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AACountTimeDemo.debug.xcconfig"; path = "Target Support Files/Pods-AACountTimeDemo/Pods-AACountTimeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F4F8335B4C237A2AD65EA836 /* Pods_AACountTimeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AACountTimeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA497D3B4D8134A9529F73E5 /* Pods-AACountTimeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AACountTimeDemo.release.xcconfig"; path = "Target Support Files/Pods-AACountTimeDemo/Pods-AACountTimeDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA78B53D58A1CCEF0516FAB /* Pods_AACountTimeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				7593CC4E235816BD004D52D5 /* AACountTimeDemo */,
 				7593CC4D235816BD004D52D5 /* Products */,
+				8B9830AA23F19E71A561E827 /* Pods */,
+				CFE59B9A56622012ABC590CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,24 @@
 			path = ../../../AACount;
 			sourceTree = "<group>";
 		};
+		8B9830AA23F19E71A561E827 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC7FE6209242A87BF7957D07 /* Pods-AACountTimeDemo.debug.xcconfig */,
+				FA497D3B4D8134A9529F73E5 /* Pods-AACountTimeDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFE59B9A56622012ABC590CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4F8335B4C237A2AD65EA836 /* Pods_AACountTimeDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7593CC65235816BF004D52D5 /* Build configuration list for PBXNativeTarget "AACountTimeDemo" */;
 			buildPhases = (
+				5CED6573945DDA8BBBA7BFE3 /* [CP] Check Pods Manifest.lock */,
 				7593CC48235816BD004D52D5 /* Sources */,
 				7593CC49235816BD004D52D5 /* Frameworks */,
 				7593CC4A235816BD004D52D5 /* Resources */,
+				BE6999482396240614BC01C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CED6573945DDA8BBBA7BFE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AACountTimeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE6999482396240614BC01C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AACountTimeDemo/Pods-AACountTimeDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AACountTimeDemo/Pods-AACountTimeDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AACountTimeDemo/Pods-AACountTimeDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7593CC48235816BD004D52D5 /* Sources */ = {
@@ -302,6 +371,7 @@
 		};
 		7593CC66235816BF004D52D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC7FE6209242A87BF7957D07 /* Pods-AACountTimeDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +389,7 @@
 		};
 		7593CC67235816BF004D52D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA497D3B4D8134A9529F73E5 /* Pods-AACountTimeDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

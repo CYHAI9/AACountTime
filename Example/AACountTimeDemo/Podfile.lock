@@ -1,0 +1,16 @@
+PODS:
+  - AACountTime (1.0.1)
+
+DEPENDENCIES:
+  - AACountTime
+
+SPEC REPOS:
+  trunk:
+    - AACountTime
+
+SPEC CHECKSUMS:
+  AACountTime: d9654b84df4a2a88eb5bab68caa90f07478b6df5
+
+PODFILE CHECKSUM: 5986d2b0c71a65d5ac7510b57773958eb01efd4d
+
+COCOAPODS: 1.8.4
